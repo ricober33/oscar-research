@@ -1,0 +1,7 @@
+# 个人背景，只留在本机
+my-context.md
+
+# 单文件版含个人背景
+dist/
+
+.DS_Store

@@ -146,7 +146,7 @@ cp my-context.example.md my-context.md
 ## 五步是怎么做的
 
 ```mermaid
-flowchart LR
+flowchart TD
     Q["你的问题"] --> P["画布<br/>不超过 10 行"]
     P --> O["O 盯紧目标"]
     O --> S["S 足以支撑"]

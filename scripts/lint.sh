@@ -18,19 +18,19 @@ for key in name version description; do
 done
 grep -qE '^name: oscar-research$' "$SKILL" && pass "name 是 oscar-research" || err "name 应为 oscar-research"
 
-for h in "## O 目标" "## S 范围" "## C 清单" "## A 查证" "## R 归因" "## 你可能没看到的" "## 存档" "## 交出去之前自查"; do
+for h in "## 铁律" "## 开场：先给画布" "## O 盯紧目标" "## S 足以支撑" "## C 头部清晰" "## A 穷尽手段" "## R 实事求是" "## 你可能没看到的" "## 存档" "## 交出去之前自查"; do
   grep -qF "$h" "$SKILL" && pass "有小节：$h" || err "缺小节：$h"
 done
 
 echo
 echo "检查报告模板"
-for h in "## 结论" "## 你可能没看到的" "## 钱和人怎么流动" "## 它为什么做成了（或没做成）" "## 拿来比的几家" "## 你能学的，不能照搬的，最大的风险" "## 下一步：一个两周内能做的小验证" "## 还不知道的" "## 来源"; do
+for h in "## 结论" "## 画布" "## 你可能没看到的" "## 钱和人怎么流动" "## 它为什么做成了（或没做成）" "## 拿来比的几家" "## 决策题的几个选项" "## 关键判断" "## 反论和最大风险" "## 缺口和下一步" "## 来源"; do
   grep -qF "$h" "$TEMPLATE" && pass "模板有：$h" || err "模板缺：$h"
 done
 
 echo
 echo "检查用词（这些词会让读者看不懂，SKILL.md 和模板里不该出现）"
-BANNED='负载步骤|去壳|卷宗|逻辑线|画布|收敛|门禁|判据|赋能|抓手|闭环|护城河|底层逻辑'
+BANNED='负载步骤|去壳|卷宗|逻辑线|收敛|门禁|判据|赋能|抓手|闭环|护城河|底层逻辑'
 if grep -nE "$BANNED" "$SKILL" "$TEMPLATE"; then err "出现了上面这些词"; else pass "没有"; fi
 
 echo

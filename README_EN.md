@@ -6,15 +6,15 @@ An agent skill for researching a company, product, person, or market — and fin
 
 ## What it does
 
-Ask your agent "research X" and it follows five fixed steps:
+Ask your agent "research X". It starts with a canvas of at most 10 lines (what will and will not be researched, who will be compared), then follows five steps:
 
 | Step | Name | Question |
 |---|---|---|
-| O | Objective | What decision is this research for? What does the user currently assume? |
-| S | Scope | How deep? What is must-read, nice-to-have, out of scope? |
-| C | Comparison list | Who else to compare: direct peers, different approaches, borrowable ideas, and at least one **failed** attempt |
-| A | Evidence | Primary pages → real user behavior → counter-evidence search → archived older versions → original documents → record what could not be opened |
-| R | Attribution | What really made it succeed (or fail)? What can be learned, what cannot be copied, what is the single biggest risk? |
+| O | Objective | Turn "tell me about X" into a decision question: options, success criteria, out of scope |
+| S | Sufficient scope | Pick one of seven depth levels (SOP, ROI, revenue formula, unit economics, business model, whole company, industry); must-read / optional / out |
+| C | Clear comparison set | Direct competitors, indirect competitors, borrowable ideas, and at least one **failed** attempt; no major player missed |
+| A | All channels | Official pages → archived older versions → real user behavior → counter-evidence search → job posts → reports → regulation → original documents |
+| R | Reality first | Ask "why" until reaching the structural cause; then answer the decision question, give ≤3 key judgments, the strongest counter-evidence, gaps and a two-week test |
 
 Every report has a fixed structure, leads with the conclusion, and must include a section of **things you probably did not see** — 2 to 4 findings that are not visible from the official website and would change your decision. Every important sentence carries a source number and one of five reliability labels (verified / single source / self-reported / interested party / unverified).
 

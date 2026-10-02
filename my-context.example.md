@@ -31,5 +31,5 @@ skill 每次开始调研前会先读它；它和 SKILL.md 冲突时，以它为�
 
 ## 存在哪里
 
-- 调研笔记和报告：（比如 `~/Documents/research-expert/`）
+- 案例库：（比如 `~/Documents/research-expert/`）
 - PDF：（比如桌面）

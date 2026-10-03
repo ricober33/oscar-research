@@ -3,7 +3,7 @@
 <p align="center"><strong>帮你看清一家公司、一个产品、一个人到底是靠什么做成的，以及你能学什么、不能照搬什么。</strong></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.0-blue" alt="version 1.0.0">
+  <img src="https://img.shields.io/badge/version-1.0.1-blue" alt="version 1.0.1">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT"></a>
   <img src="https://img.shields.io/badge/Claude%20Code-✓-D97757" alt="Claude Code">
   <img src="https://img.shields.io/badge/Codex-✓-111111" alt="Codex">

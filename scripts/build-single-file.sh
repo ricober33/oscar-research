@@ -13,12 +13,13 @@ mkdir -p "$OUT_DIR"
 
 {
   echo "以下是一份调研 skill 的完整说明。之后用户说调研、研究、拆解、OSCAR、看看这家公司、竞品、学标杆、盯对手时，严格按这份说明做。"
-  echo "说明里提到的 my-context.md 和 references/report-template.md，内容都已经附在本文里。"
+  echo "说明里提到的 my-context.md 和 references/ 下的几个文件，内容都已经附在本文里。"
   echo
   if [ -f "$SRC/my-context.md" ]; then
     echo "==================== my-context.md ===================="
     echo
-    cat "$SRC/my-context.md"
+    # 标了「作废」的小节不放进来；指定去别处读的背景，网页 AI 读不到，照原文保留那句说明
+    awk '/^## /{skip=($0 ~ /作废/)} !skip{print}' "$SRC/my-context.md"
     echo
   fi
   echo "==================== SKILL.md ===================="
@@ -29,6 +30,14 @@ mkdir -p "$OUT_DIR"
   echo "==================== references/report-template.md ===================="
   echo
   cat "$SRC/references/report-template.md"
+  for f in person-research.md person-report-template.md account-safety.md; do
+    if [ -f "$SRC/references/$f" ]; then
+      echo
+      echo "==================== references/$f ===================="
+      echo
+      cat "$SRC/references/$f"
+    fi
+  done
 } > "$OUT"
 
 echo "已生成：$OUT"

@@ -18,6 +18,12 @@ Ask your agent "research X". It starts with a canvas of at most 10 lines (what w
 
 Every report has a fixed structure, leads with the conclusion, and must include a section of **things you probably did not see** — 2 to 4 findings that are not visible from the official website and would change your decision. Every important sentence carries a source number and one of five reliability labels (verified / single source / self-reported / interested party / unverified).
 
+## Researching a person, and protecting your accounts
+
+Researching a teacher, creator, or personal account follows its own method (`references/person-research.md`): pull the data of their posts, compare what performed well against what did not, break down covers, titles and pages with real examples, then sort what you can take into four groups.
+
+Platforms such as Xiaohongshu and Douyin ban accounts that read in bulk. By default the skill does not read these platforms with your logged-in account; it uses public pages, screenshots you send, or third-party data first, asks before using your login, caps pages and spacing, and stops at the first sign of rate limiting (`references/account-safety.md`).
+
 ## Install
 
 ```bash

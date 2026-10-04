@@ -3,7 +3,7 @@
 <p align="center"><strong>帮你看清一家公司、一个产品、一个人到底是靠什么做成的，以及你能学什么、不能照搬什么。</strong></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.1-blue" alt="version 1.0.1">
+  <img src="https://img.shields.io/badge/version-1.1.0-blue" alt="version 1.1.0">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT"></a>
   <img src="https://img.shields.io/badge/Claude%20Code-✓-D97757" alt="Claude Code">
   <img src="https://img.shields.io/badge/Codex-✓-111111" alt="Codex">
@@ -65,6 +65,10 @@
 
 完整示例：[examples/delphi-ai.md](examples/delphi-ai.md)（调研 Delphi.ai，一个把专家做成 AI 分身的平台；这份是正式版之前的试跑稿，小节比现在的模板少几节）。
 报告模板：[references/report-template.md](references/report-template.md)。
+
+**查人**（老师、创作者、个人账号）走单独的方法：先拉出对方作品的数据，比较火的和不火的差在哪，封面、标题、内页一项一项配原图拆，最后分「直接拿来用、改了再用、只学思路、不要学」四类。报告模板见 [references/person-report-template.md](references/person-report-template.md)。
+
+**保护你的账号。** 小红书、抖音这类平台会封批量读取的账号。这个 skill 默认不用你登录的账号去读这些平台，先用公开网页、你发来的截图或第三方数据；必须用登录账号时会先问你，一次最多 15 个页面、每页间隔 10 到 20 秒；页面一直加载或提示账号异常就马上停。规则见 [references/account-safety.md](references/account-safety.md)。
 
 ## 安装
 
@@ -187,6 +191,9 @@ flowchart TD
 |---|---|
 | [`SKILL.md`](SKILL.md) | skill 本体，AI 读的就是它 |
 | [`references/report-template.md`](references/report-template.md) | 报告模板，所有平台按同一个结构输出 |
+| [`references/person-research.md`](references/person-research.md) | 查人（老师、创作者、个人账号）时的分析方法 |
+| [`references/person-report-template.md`](references/person-report-template.md) | 查人的报告模板 |
+| [`references/account-safety.md`](references/account-safety.md) | 保护你的平台账号：读小红书、抖音这类平台时的限制 |
 | [`examples/delphi-ai.md`](examples/delphi-ai.md) | 一份完整的示例报告 |
 | [`my-context.example.md`](my-context.example.md) | 个人背景模板，复制成 `my-context.md` 再改 |
 | [`scripts/install.sh`](scripts/install.sh) | 装到本机所有客户端 |

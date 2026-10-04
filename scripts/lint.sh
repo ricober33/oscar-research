@@ -13,9 +13,10 @@ pass() { echo "  ✓ $1"; }
 echo "检查 SKILL.md"
 
 head -1 "$SKILL" | grep -qx -- '---' && pass "有开头的元信息块" || err "第一行应为 ---"
-for key in name version description; do
+for key in name description; do
   grep -qE "^$key:" "$SKILL" && pass "元信息里有 $key" || err "元信息缺 $key"
 done
+grep -qE "^(  )?version:" "$SKILL" && pass "元信息里有 version" || err "元信息缺 version"
 grep -qE '^name: oscar-research$' "$SKILL" && pass "name 是 oscar-research" || err "name 应为 oscar-research"
 
 for h in "## 铁律" "## 开场：先给画布" "## O 盯紧目标" "## S 足以支撑" "## C 头部清晰" "## A 穷尽手段" "## R 实事求是" "## 你可能没看到的" "## 存档" "## 交出去之前自查"; do

@@ -8,7 +8,7 @@ NAME="oscar-research"
 
 hash_of() { shasum -a 256 "$1" 2>/dev/null | cut -c1-12; }
 SRC_HASH="$(hash_of "$SRC/SKILL.md")"
-VERSION="$(sed -n 's/^version: *//p' "$SRC/SKILL.md" | head -1)"
+VERSION="$(sed -n 's/^ *version: *//p' "$SRC/SKILL.md" | head -1 | tr -d '"')"
 
 echo "仓库：$SRC"
 echo "版本：$VERSION   SKILL.md 指纹：$SRC_HASH"

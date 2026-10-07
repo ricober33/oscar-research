@@ -36,6 +36,14 @@ For web-based assistants (Grok, ChatGPT, Gemini), run `scripts/build-single-file
 
 Optional: copy `my-context.example.md` to `my-context.md` and describe your own work, market, and writing preferences. It stays local (git-ignored).
 
+## Archive and Grokbot
+
+Set the final viewing destination, archive root, index and transfer method in `my-context.md`. Each round stores `canvas.md`, `facts.md`, `report.md`, `sources.md` and any PDF/HTML attachments together; the root `INDEX.md` links to the reports. Same-day follow-ups use distinct folders instead of overwriting previous reports.
+
+If the user chooses a Grokbot research Bot as the shared destination, all clients must transfer complete artifacts to that Bot's actual runtime (for example `/workspace/research-expert/`) and read them back there. A similarly named local folder is not the remote archive. If the connection is unavailable, report the archive as pending. Users can ask the designated Bot to list research or open a report.
+
+Grokbot's installed workflow is separate from the local clients. Verify its actual workflow directory, sync the skill body and references while preserving platform metadata and unrelated private configuration, then read back the remote files. The local check script alone does not verify Grokbot.
+
 ## Language
 
 The skill and reports are written in Simplified Chinese. The agent replies in the language you ask in.

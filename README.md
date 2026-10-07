@@ -120,7 +120,7 @@ bash ~/.agents/skills/oscar-research/scripts/build-single-file.sh
 cd ~/.agents/skills/oscar-research && git pull
 ```
 
-所有本机客户端同时更新。
+所有本机客户端同时更新。Grokbot 运行在单独的环境，还要同步它实际加载的技能，按下面的说明核对。
 
 ## 写上你的背景（建议）
 
@@ -214,7 +214,12 @@ skill 要求它写清是哪种打不开（要注册、地区限制、页面没�
 能。它会先读上一轮的报告，从没查清的地方开工，报告开头先写上次哪句错了。你做完上次建议的小验证，告诉它结果，它会写进新一轮。
 
 **调研结果存在哪？**
-每一轮一个文件夹 `<案例名>-<日期>/`，里面四个文件：`canvas.md`（画布）、`facts.md`（事实库，一条一行带来源）、`report.md`（报告）、`sources.md`（来源清单）。位置在 `my-context.md` 里设，默认 `~/Documents/research-expert/`。
+每一轮一个文件夹 `<案例名>-<日期>/`，里面四个文件：`canvas.md`（画布）、`facts.md`（事实库）、`report.md`（完整报告）、`sources.md`（来源清单）；PDF、HTML 等附件也放在这一轮里。根目录 `INDEX.md` 按日期列出对象、报告链接和一句结论。用户本次指定的位置优先，否则按 `my-context.md` 配置；没有配置时默认 `~/Documents/research-expert/`。
+
+**想在 Grokbot 里统一看所有平台的调研？**
+在 `my-context.md` 写清调研 Bot 名称、该 Bot 运行环境中的案例库和总目录，例如 `/workspace/research-expert/` 和 `INDEX.md`。其他平台做完后，把完整文件和附件传入这个环境，再更新总目录并读回检查。本机创建同名目录不算存入 Grokbot；连接不可用时，只能说报告完成、尚未存入。用户在指定调研 Bot 里说「列一下调研」或「打开某某报告」查看。
+
+Grokbot 的技能也须单独更新：核实实际加载的工作流目录，同步 `SKILL.md` 正文和 `references/`，保留平台要求的技能名称、元信息及未涉及的私人配置，并更新「存在哪里」。不要把技能代码目录和报告案例库混为一处。`scripts/check.sh` 只检查本机；Grokbot 还须从它的运行环境读回正文、引用文件和配置。
 
 **报告太长？**
 先读「结论」和「你可能没看到的」两节就够做决定。后面的小节是给你核对用的。

@@ -43,5 +43,6 @@ done
 
 echo
 [ -f "$SRC/my-context.md" ] && echo "个人背景 my-context.md：有" || echo "个人背景 my-context.md：没有（可复制 my-context.example.md 来写）"
-echo "结果：$ok 个一致，$bad 个有问题"
+echo "本机结果：$ok 个一致，$bad 个有问题"
+echo "Grokbot：运行在独立环境，本脚本未验证；须单独读回实际加载的技能正文、引用文件和存档配置。"
 [ "$bad" -eq 0 ]

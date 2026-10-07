@@ -52,6 +52,7 @@ for row in "${TARGETS[@]}"; do
 done
 
 echo
+echo "Grokbot 的技能在它的独立运行环境里；本脚本不安装或更新 Grokbot，须核实它实际加载的工作流目录后单独同步。"
 echo "Grok、ChatGPT 这类网页里的 AI 读不了本机文件夹："
 echo "  运行 bash scripts/build-single-file.sh，把生成的 dist/oscar-research-单文件版.md 整段粘进去。"
 echo

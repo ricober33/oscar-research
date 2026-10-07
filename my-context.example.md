@@ -32,8 +32,11 @@ skill 每次开始调研前会先读它；它和 SKILL.md 冲突时，以它为�
 
 ## 存在哪里
 
-- 案例库：（比如 `~/Documents/research-expert/`）
-- PDF：（比如桌面）
+- 最终查看入口：（本机文件夹，或指定的 Bot / 云端。例：Grokbot 的调研 Bot）
+- 案例库：（目标实际运行环境中的路径。例：Grokbot 的 `/workspace/research-expert/`）
+- 总目录：（例：`/workspace/research-expert/INDEX.md`）
+- 从其他平台存入：（填写当前可用的连接或文件传输方式；没有连接时明确写尚未存入，不把本机目录当作云端目录）
+- PDF 和其他附件：（默认和报告存在同一轮文件夹，另需导出到哪里可写在此处）
 
 ## 平台账号状态
 
